@@ -35,7 +35,12 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, object) => {
+    return acc + object.price;
+  }, 0)
+  
+  
+  console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -55,6 +60,11 @@ const cart = [
 
 //CODE HERE
 
+function calcFinalPrice(cartTotal, couponValue, tax){
+    let taxAmount = cartTotal * tax;
+    let finalPrice = cartTotal + taxAmount - couponValue;
+    return finalPrice;
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -77,10 +87,17 @@ const cart = [
     Your object should have at least 4 properties. 
 */
 
-/*
+
     TEXT ANSWER HERE
 
-*/
+    // you should have their name, most ordered items, email, birthday
+    // these can all be strings
+    // email is important to send them coupons and deals
+    // brithday is important so you know if it is their birthday when they come in and you can give them something
+
+    
+
+
 
 /*
     Now, create a customer object following your own
@@ -88,3 +105,12 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = [
+    {
+        name: `Randy`,
+        favorite: `Grilled Chicken Sandwich`,
+        email: `randy.bottoms@email.com`,
+        birthday: `Nov 1, 1999`
+    }
+]
